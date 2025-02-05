@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Clothing Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+        }
+        
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .search-bar button {
+            background: #ff4081;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        /* Background Colors for Sections */
+#home {
+    background-color: #f8f9fa; /* Light Gray */
+    padding: 50px 0;
+}
+
+#gallery {
+    background-color: #fbe9e7; /* Light Peach */
+    padding: 50px 0;
+}
+
+
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .card {
+            margin: 15px;
+            max-width: 300px;
+           
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+          }
+
+        
+            .container {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 50px 20px;
+                text-align: center;
+            }
+            .contact-container {
+                background: #ffffff8d;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                max-width: 600px;
+                margin: 50px auto;
+            }
+            h2 {
+                margin-bottom: 20px;
+            }
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            .contact-form button {
+                width: 100%;
+                padding: 12px;
+                background: #007BFF;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+            .contact-form button:hover {
+                background: #0056b3;
+            }
+            .contact-form input:focus,
+            .contact-form textarea:focus {
+                border-color: #007BFF;
+                outline: none;
+            }
+            .gallery-container {
+                background-color: #e0e0e0;
+                padding: 50px 0;
+            }
+        .gallery-container {
+            background-color: #e0e0e0;
+            padding: 50px 0;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Fashion Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    
+        <div class="search-bar">
+            <input type="text" placeholder="Search for fashion trends..." id="search">
+            <button type="submit">🔍</button>
+        </div>
+    </header>
+    
+    
+    <section id="home" class="container text-center py-5">
+        <h2>Discover Your Style</h2>
+        <p>Explore the latest fashion trends and find the perfect outfit for every occasion. Our collection is designed to keep you stylish and comfortable, whether it's casual wear, office attire, or party outfits.</p>
+        <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Unrec/tophero/PC/Clearance_Store._CB542298117_.jpg" class="d-block w-100" alt="Fashion 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Unrec/tophero/PC/Deals_on_1_lakh_styles._CB542298117_.jpg" class="d-block w-100" alt="Fashion 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Unrec/tophero/PC/Coupons._CB542298117_.jpg" class="d-block w-100" alt="Fashion 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    
+    <section id="about" class="container text-center py-5">
+        <h2>About Us</h2>
+        <p>Fashion Hub is your one-stop destination for trendy and affordable clothing. We are dedicated to bringing you the latest styles at the best prices. Our mission is to empower individuals to express themselves through fashion and enhance their confidence.</p>
+        <p>We source high-quality materials and ensure that every piece of clothing is designed with precision and care. Whether you're looking for everyday essentials or statement pieces, Fashion Hub has something for everyone.</p>
+    </section>
+    
+    <section id="gallery" class="container py-5">
+        <h2 class="text-center">Gallery</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/trouser/q/a/m/free-emz01958-emeros-original-imagnfk6mmjjnhgg.jpeg?q=70" class="card-img-top" alt="Casual Wear">
+                    <div class="card-body">
+                        <h5 class="card-title">Casual Wear</h5>
+                        <p class="card-text">Comfortable and stylish everyday outfits.</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/knknc7k0/jacket/l/r/k/m-ttjk001182-tokyo-talkies-original-imag27x9tngquxfp.jpeg?q=70" class="card-img-top" alt="Formal Wear">
+                    <div class="card-body">
+                        <h5 class="card-title">Formal Wear</h5>
+                        <p class="card-text">Elegant and sophisticated clothing for special occasions.</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/1/e/4/s-pink-yoke-straight-kurti-prisca-original-imah4u6guubn9zwx.jpeg?q=70" class="card-img-top" alt="Party Collection">
+                    <div class="card-body">
+                        <h5 class="card-title">Party Collection</h5>
+                        <p class="card-text">Trendy outfits to make you stand out.</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/q/i/m/s-1017-dhaari-original-imah5ex3cx7raf2s.jpeg?q=70">
+                    <div class="card-body">
+                        <h5 class="card-title">Summer Collection</h5>
+                        <p class="card-text">Light and breezy outfits for the summer season.</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/o/b/e/m-kcsh-110-wh-fubar-original-imah4zenffq4grxu.jpeg?q=70">
+                    <div class="card-body">
+                        <h5 class="card-title">Winter Wear</h5>
+                        <p class="card-text">Stay warm and stylish during the cold months.</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/k/8/b/-original-imagyk8qaafzmfbc.jpeg?q=70" class="card-img-top" alt="Athleisure">
+                    <div class="card-body">
+                        <h5 class="card-title">Athleisure</h5>
+                        <p class="card-text">Sporty and comfortable clothing for an active lifestyle.</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-apparel-combo/p/n/h/5-6-years-trm-bcs-119-2-trampoline-original-imah3xjexcevgve9.jpeg?q=70" class="card-img-top" alt="Ethnic Wear">
+                    <div class="card-body">
+                        <h5 class="card-title">Ethnic Wear</h5>
+                        <p class="card-text">Traditional and modern fusion outfits.</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sweatshirt/0/t/b/13-14-years-ds-110-dagcros-original-imagjkjrsqt2j7cy.jpeg?q=70" class="card-img-top" alt="Denim Collection">
+                    <div class="card-body">
+                        <h5 class="card-title">Denim Collection</h5>
+                        <p class="card-text">Classic and trendy denim styles.</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-apparel-combo/5/m/i/3-6-months-combo-3-t-hf11-alphabets-mars-infiniti-original-imahybtgnhxgpvcv.jpeg?q=70" class="card-img-top" alt="Luxury Wear">
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury Wear</h5>
+                        <p class="card-text">High-end fashion for premium occasions.</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="container text-center py-5">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All Rights Reserved.</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+        <p>Follow us on: 
+            <a href="https://facebook.com/fashionhub" target="_blank">Facebook</a> | 
+            <a href="https://instagram.com/fashionhub" target="_blank">Instagram</a> | 
+            <a href="https://twitter.com/fashionhub" target="_blank">Twitter</a>
+        </p>
+        <p>Contact us: <a href="mailto:support@fashionhub.com">support@fashionhub.com</a></p>
+    </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
