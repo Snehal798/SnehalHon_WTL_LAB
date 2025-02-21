@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+        
+    <script type="text/javascript">
+        let expression = "";
+
+        function add(value) {
+            expression += value;
+            document.getElementById("display").value = expression;
+        }
+
+        function calculate() {
+            try {
+                document.getElementById("display").value = eval(expression);
+                expression = document.getElementById("display").value;
+            } catch (e) {
+                alert("Invalid Expression");
+            }
+        }
+
+        function clearInput() {
+            expression = "";
+            document.getElementById("display").value = "";
+        }
+
+        function backspace() {
+            expression = expression.slice(0, -1);
+            document.getElementById("display").value = expression;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="display" class="display" readonly />
+
+        <div class="buttons">
+            <button class="btn" onclick="add('7')">7</button>
+            <button class="btn" onclick="add('8')">8</button>
+            <button class="btn" onclick="add('9')">9</button>
+            <button class="btn operator" onclick="add('/')">/</button>
+
+            <button class="btn" onclick="add('4')">4</button>
+            <button class="btn" onclick="add('5')">5</button>
+            <button class="btn" onclick="add('6')">6</button>
+            <button class="btn operator" onclick="add('*')">*</button>
+
+            <button class="btn" onclick="add('1')">1</button>
+            <button class="btn" onclick="add('2')">2</button>
+            <button class="btn" onclick="add('3')">3</button>
+            <button class="btn operator" onclick="add('-')">-</button>
+
+            <button class="btn" onclick="add('0')">0</button>
+            <button class="btn" onclick="add('.')">.</button>
+            <button class="btn clear" onclick="clearInput()">C</button>
+            <button class="btn equal" onclick="calculate()">=</button>
+            <button class="btn operator" onclick="add('+')">+</button>
+            <button class="btn backspace" onclick="backspace()">⌫</button>
+        </div>
+    </div>
+
+    <script src="Cal.js"></script>
+
+</body>
+</html>
